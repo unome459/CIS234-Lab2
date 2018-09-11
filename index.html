@@ -9,6 +9,43 @@
             grid-area: header;
         }
 
+        @import url('https://fonts.googleapis.com/css?family=Kavoon');
+
+        @keyframes dance{
+            0%{
+                transform: rotate(-30deg);
+            }
+            50%{
+                transform: rotate(30deg);
+            }
+            100%{
+                transform: rotate(-30deg);
+            }
+        }
+
+        .blue-square{
+            background-color: darkblue;
+            height: 6rem;
+            width: 6rem;
+            margin-right: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Kavoon', cursive;
+            color: cornsilk;
+            font-size: 3rem;
+            transition: all 1s;
+            animation: dance 3s infinite;
+        }
+
+        .blue-square:hover{
+            height: 10rem;
+            width: 10rem;
+            font-size: 5rem;
+            background-color: cornsilk;
+            color: red;
+        }
+
         .container > nav {
             grid-area: nav;
         }
@@ -43,13 +80,13 @@
         }
 
         .container > * {
-            background-color: gold;
-            color: red;
+            background-color: lightseagreen;
+            color: darkred;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 3rem;
+            font-size: 1rem;
         }
 
         @media screen and (min-width: 768px){
@@ -57,19 +94,47 @@
             .container {
                 grid-template-areas:
                     "header header header header header"
-                    "nav . main main ads"
-                    "footer footer footer footer footer";
+                    "nav nav main main ads"
+                    "nav nav footer footer footer";
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>Header</header>
-        <nav>Menu</nav>
-        <main>Main Content</main>
-        <aside class="ads-sidebar">Ads</aside>
-        <footer>Footer</footer>
+        <header>
+            <div class="blue-square">J</div>
+            <div class="blue-square">A</div>
+            <div class="blue-square">M</div>
+            <div class="blue-square">E</div>
+            <div class="blue-square">S</div>
+            <div class="blue-square">O</div>
+            <div class="blue-square">N</div>
+        </header>
+        <nav>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Morbi viverra interdum metus, vulputate mattis velit.
+            </p>
+        </nav>
+        <main>
+            <p>
+                Quisque in luctus lorem. Maecenas mollis vitae massa et iaculis.
+                Nam eget ligula nulla. Nunc et iaculis arcu, eget varius elit.
+            </p>
+        </main>
+        <aside class="ads-sidebar">
+            <p>
+                Phasellus vestibulum luctus semper.
+                Integer justo urna, pretium et orci id, vehicula molestie quam.
+            </p>
+        </aside>
+        <footer>
+            <p>
+                Proin lobortis eros ac diam aliquam blandit.
+                Etiam et tempus felis.
+            </p>
+        </footer>
     </div>
 </body>
 </html>
