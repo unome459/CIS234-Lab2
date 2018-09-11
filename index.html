@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>
+    <style>
+        .container > header {
+            grid-area: header;
+        }
+
+        .container > nav {
+            grid-area: nav;
+        }
+
+        .container > main {
+            grid-area: main;
+        }
+
+        .container > .ads-sidebar {
+            grid-area: ads;
+        }
+
+        .container > footer {
+            grid-area: footer;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-gap: 1rem;
+            grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "ads"
+            "footer";
+        }
+
+        .container > * {
+            background-color: gold;
+            color: red;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+
+        @media screen and (min-width: 768px){
+
+            .container {
+                grid-template-areas:
+                    "header header header header header"
+                    "nav . main main ads"
+                    "footer footer footer footer footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Menu</nav>
+        <main>Main Content</main>
+        <aside class="ads-sidebar">Ads</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
